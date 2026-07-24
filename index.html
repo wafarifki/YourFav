@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourFav - Instant Favicon Generator</title>
+    <meta name="description" content="YourFav - Tools for Instant favicon generator. Upload one image, get every size bundled in a ZIP with ready-to-use integration code.">
+    <meta name="keywords" content="favicon, generator, instant, icon, web, design, yourfav, favicon generator, favicon package, favicon sizes, favicon integration, favicon download, favicon zip, favicon code, favicon tools">
+
+    <!-- Basic OG Tags -->
+    <meta property="og:title" content="YourFav - Instant Favicon Generator" />
+    <meta property="og:description" content="YourFav - Tools for Instant favicon generator. Upload one image, get every size bundled in a ZIP with ready-to-use integration code." />
+    <meta property="og:image" content="https://wafarifki.github.io/YourFav/assets/img/ogimage.jpg" />
+    <meta property="og:url" content="https://wafarifki.github.io/YourFav/" />
+
+    <!-- Twitter/X Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://wafarifki.github.io/YourFav/assets/img/ogimage.jpg" />
+
+    <!-- Optional but recommended -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="YourFav - Instant Favicon Generator" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16×16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32×32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48×48" href="favicon/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96×96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="128×128" href="favicon/favicon-128x128.png">
+
+    <!-- Apple Touch -->
+    <link rel="apple-touch-icon" sizes="152×152" href="favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180×180" href="favicon/apple-touch-icon.png">
+
+    <!-- Android / PWA -->
+    <link rel="icon" type="image/png" sizes="192×192" href="favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512×512" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <!-- Microsoft Tiles -->
+    <meta name="msapplication-TileColor" content="#4db5ff">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0c1222" media="(prefers-color-scheme: dark)">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="ambient">
+        <div class="orb"></div>
+        <div class="orb"></div>
+        <div class="orb"></div>
+    </div>
+    <header>
+        <div class="wrap hdr">
+            <div class="logo" id="logoBtn">
+                <div class="logo-m">
+                    <img src="assets/img/worldwide.png" style="width: 100%;" alt="YourFav - Favicon Generator"/>
+                </div>
+                <div class="logo-w">Your<em>Fav</em></div>
+            </div>
+            <button class="th-btn" id="thBtn" aria-label="Toggle theme">
+                <div class="th-dot on" data-m="light">☀️</div>
+                <div class="th-dot" data-m="dark">🌙</div>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <section class="hero">
+                <div class="hero-pill">Instant Favicon Generator</div>
+                <h1>One image.<br><em>Every favicon size.</em></h1>
+                <p>Upload any image, pick your sizes, and download a complete favicon package with integration code.</p>
+            </section>
+            <section class="up-sec">
+                <div class="up-zone" id="dropZone">
+                    <div class="up-ring">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17 8 12 3 7 8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </div>
+                    <div class="up-title">Drop your image here</div>
+                    <div class="up-sub">or click to browse — any image format</div>
+                    <div class="fmt-row">
+                        <span class="fmt">PNG</span>
+                        <span class="fmt">JPG</span>
+                        <span class="fmt">ICO</span>
+                        <span class="fmt">WEBP</span>
+                        <span class="fmt">GIF</span>
+                        <span class="fmt">SVG</span>
+                        <span class="fmt">BMP</span>
+                        <span class="fmt">TIFF</span>
+                        <span class="fmt">HEIC</span>
+                    </div>
+                    <input type="file" id="fileInput" accept="image/*,.heic,.heif,.tiff,.tif,.bmp,.svg,.ico">
+                </div>
+            </section>
+            <section class="proc" id="procSec">
+                <div class="proc-card">
+                    <div class="spin">
+                        <div class="sr"></div>
+                        <div class="sr"></div>
+                        <div class="sr"></div>
+                    </div>
+                    <div class="proc-t">Generating your favicons…</div>
+                    <div class="proc-s" id="procStep">Analyzing image…</div>
+                </div>
+            </section>
+            <section class="res" id="resSec">
+                <div class="res-h">
+                    <div class="res-ok">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    <h2>Your favicons are ready!</h2>
+                    <p>Bundled into a single ZIP with integration code</p>
+                </div>
+                <div class="pv-grid" id="pvGrid"></div>
+                <div class="code">
+                    <div class="code-top">
+                        <div class="code-lbl">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"/>
+                                <polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                            Integration Code
+                        </div>
+                        <button class="btn-cp" id="btnCp">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                            </svg>
+                            Copy
+                        </button>
+                    </div>
+                    <div class="code-pre">
+                        <pre id="codePre"></pre>
+                    </div>
+                </div>
+                
+                <div class="dflex">
+                    <div style="text-align:center;width: 100%;">
+                        <button class="btn-dl" id="btnDl">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download ZIP
+                        </button>
+                    </div>
+
+                    <div style="text-align:center;width: 100%;">
+                        <button class="btn-new" id="btnNew">
+                            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                            Generate another
+                        </button>
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap">Created with ❤️ by <a href="https://wafarifki.com" target="_blank">Wafa Rifqi Anafin</a></div>
+        <div class="wrap">
+            ©<script>document.write(new Date().getFullYear())</script> YourFav - All rights reserved
+        </div>
+    </footer>
+
+    <div class="ov" id="ov">
+        <div class="modal" style="position:relative">
+            <button class="mx" id="mx" aria-label="Close">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <div class="m-file">
+                <div class="m-thumb"><img id="mThumb" src="" alt=""></div>
+                <div class="m-info">
+                    <div class="m-name" id="mName"></div>
+                    <div class="m-meta"><span id="mSz"></span><span id="mDim"></span></div>
+                </div>
+            </div>
+            <div class="m-view active" id="viewSizes">
+                <div class="m-head">
+                    <h2>Select favicon sizes</h2>
+                </div>
+                <div class="m-body">
+                    <div class="q-row"><button class="btn-q" id="qAll">Select All</button><button class="btn-q" id="qEss">Essential Only</button></div>
+                    <div class="sz-grid" id="szGrid"></div>
+                </div>
+                <div class="m-foot">
+                    <button class="btn-cn" id="mCn">Cancel</button>
+                    <button class="btn-cn" id="mSettings" style="margin-right:auto">Settings</button>
+                    <button class="btn-gn" id="mGn" disabled>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        <span id="mGt">Select sizes</span>
+                    </button>
+                </div>
+            </div>
+            <div class="m-view" id="viewSettings">
+                <div class="set-head">
+                    <h3>Settings</h3>
+                    <button class="set-close" id="setClose" aria-label="Close settings">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="m-body" style="padding-top:16px">
+                    <div class="set-grid">
+                        <div class="fld full">
+                            <label class="fld-lbl" for="fAppName">App Name</label>
+                            <input class="fld-input" type="text" id="fAppName" placeholder="My Website" value="My Website">
+                        </div>
+                        <div class="fld full">
+                            <label class="fld-lbl" for="fShortName">Short Name</label>
+                            <input class="fld-input" type="text" id="fShortName" placeholder="Website" value="Website">
+                        </div>
+                        <div class="fld">
+                            <label class="fld-lbl">Theme Color</label>
+                            <div class="color-wrap">
+                                <input class="color-pick" type="color" id="fThemeColor" value="#2563eb">
+                                <input class="fld-input color-hex" type="text" id="fThemeHex" value="#2563eb" maxlength="7">
+                            </div>
+                        </div>
+                        <div class="fld">
+                            <label class="fld-lbl">Background Color</label>
+                            <div class="color-wrap">
+                                <input class="color-pick" type="color" id="fBgColor" value="#ffffff">
+                                <input class="fld-input color-hex" type="text" id="fBgHex" value="#ffffff" maxlength="7">
+                            </div>
+                        </div>
+                        <div class="fld full">
+                            <label class="fld-lbl" for="fPath">Favicon Path</label>
+                            <input class="fld-input" type="text" id="fPath" placeholder="favicon/" value="favicon/">
+                        </div>
+                    </div>
+                </div>
+                <div class="m-foot">
+                    <button class="btn-cn" id="setDone">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js" integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/heic2any/0.0.4/heic2any.min.js" integrity="sha512-VjmsArkf8Vv2yyvbXCyVxp+R3n4N2WyS1GEQ+YQxa7Hu0tx836WpY4nW9/T1W5JBmvuIsxkVH/DlHgp7NEMjDw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
